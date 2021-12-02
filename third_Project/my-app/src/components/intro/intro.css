@@ -1,0 +1,117 @@
+.i{
+    display: flex;
+    height: 100vh;
+    
+} 
+
+.i-left{
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.i-right{
+    flex: 1; 
+    position: relative;
+} 
+
+.i-left-wrapper{
+    padding: 50px; 
+    height: 50%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.i-intro{
+    font-size: 30px;
+    font-weight: 300;
+    
+}
+
+.i-name{
+    font-size: 60px;
+} 
+
+.i-tittle{
+    height: 50px;
+    overflow: hidden;
+}  
+
+.i-tittle-wrapper{
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;   
+} 
+
+@keyframes move {
+    25%{ 
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    75%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}
+
+.i-tittle-items{
+    height: 50px; 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: rgb(51, 84, 192); 
+    display: flex;
+    align-items: center;
+} 
+
+.i-img{ 
+  
+    right:0 ;
+    /* right: -30px; */ 
+    height: 100%;
+    width: 50%;
+    object-fit: cover; 
+    position: absolute;
+
+} 
+
+.i-bg{ 
+    /* using clip path generator created this clip path */
+    clip-path: circle(50% at 97% 50%); 
+    background: rgb(51, 84, 192) ; 
+    width: 100%;
+    height: 100%; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .i{
+        flex-direction: column;
+    } 
+
+    .i-left-wrapper{
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    } 
+     
+    .i-tittle{
+        margin-top: 15px;
+    }
+    
+    .i-discription{
+        display: none;
+    }
+}
